@@ -1,0 +1,11 @@
+curl_key.sh
+
+.DS_Store 
+
+.env
+
+lutz_airflow.txt
+
+logs/
+
+__pycache__/
