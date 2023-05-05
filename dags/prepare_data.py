@@ -1,6 +1,5 @@
 
-def prepare_data_X_y() -> None: # returned variables in parentheses including types?
-    import pandas as pd
+def prepare_data_X_y() -> tuple["pd.DataFrame", "pd.Series"]: 
     df = pd.read_csv('/app/clean_data/fulldata.csv')
     # ordering data according to city and date
     df.sort_values(['city', 'date'], ascending=True)

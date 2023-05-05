@@ -1,9 +1,8 @@
 import pandas as pd
+
 from airflow import DAG
-from airflow.models.xcom import XCom
 from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
-
 
 
 from sklearn.ensemble import RandomForestRegressor
@@ -86,7 +85,7 @@ task1 = PythonOperator(
 )
 
 task2 = PythonOperator(
-    task_id='transform_data.csv',
+    task_id='transform_data',
     dag=city_weather_dag,
     python_callable=transform_data_into_csv
 )
